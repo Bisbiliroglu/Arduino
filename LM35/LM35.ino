@@ -3,7 +3,7 @@
 const int lm35pin = 1, buttonpin = 0;
 float eski_sicaklik = 0;
 int button_value = 0, analog_value = 0;
-const int rs = 8, en = 9, d4 = 4, d5 = 5, d6 = 6, d7 = 7;
+const int rs = 8, en = 9, d4 = 4, d5 = 5, d6 = 6, d7 = 7, backlight = 10;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 
@@ -40,6 +40,9 @@ float readLM35_2(void){
 void setup() {
   lcd.begin(16, 2);
   analogReference( INTERNAL ); //1V1 Referans verir. 
+  pinMode(backlight,OUTPUT);
+  digitalWrite(backlight , HIGH);
+
 }
 
 void loop() {
