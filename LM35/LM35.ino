@@ -48,10 +48,10 @@ void setup() {
 void loop() {
    //lcd.clear();
    lcd.setCursor(0,0);
-   lcd.print("Beyaz : "+(String)readLM35_2(lm35pin1)+(char)223+"C");
+   lcd.print("Yesil : "+(String)readLM35_2(lm35pin1)+(char)223+"C");
    lcd.setCursor(0,1);
    //lcd.print("Analog  :"+(String)analog_value+"  ");
-   lcd.print("Siyah : "+(String)readLM35_2(lm35pin2)+(char)223+"C");
+   lcd.print("Sari  : "+(String)readLM35_2(lm35pin2)+(char)223+"C");
    delay(500);
 
    /*button_value = analogRead(buttonpin);
