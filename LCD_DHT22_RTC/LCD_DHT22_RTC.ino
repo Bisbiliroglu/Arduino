@@ -89,7 +89,7 @@ void loop() {
   lcd.print(stringBuffer);
   //Serial.println(stringBuffer);
 
-  if(now.Hour() >= lcdDarkHourBeign && now.Hour() < lcdDarkHourEnd ){
+  if(now.Hour() >= lcdDarkHourBeign || now.Hour() < lcdDarkHourEnd ){
     digitalWrite(12, LOW);   
   }else{
     digitalWrite(12, HIGH);   
